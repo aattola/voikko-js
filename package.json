@@ -2,14 +2,16 @@
   "name": "voikko",
   "version": "1.0.0",
   "description": "libvoikko for js",
-  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
+  "typings": "build/libvoikko.d.ts",
+  "main": "build/libvoikko.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "docker build --output ./build -t voikko ./docker",
-    "build:debug": "docker build --progress=plain --output type=tar,dest=./out.tar -t voikko ./docker"
+    "build:debug": "docker build --progress=plain --output type=tar,dest=./out.tar -t voikko ./docker",
+    "docs": "npx typedoc ./build/libvoikko.d.ts"
   },
   "author": "Aattola"
 }
